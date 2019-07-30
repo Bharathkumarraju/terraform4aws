@@ -3,18 +3,13 @@ provider "aws" {
   region = "us-east-1"
 }
 
-resource "aws_instance" "bharaths_ec2" {
-  ami = "ami-b374d5a5"
-  instance_type = "t2.micro"
-}
-
 resource "aws_s3_bucket" "bharath-terraform-state-storage-playground" {
   bucket = "bharath-terraform-state-playground"
   versioning {
     enabled = true
   }
   lifecycle {
-    prevent_destroy = true
+    prevent_destroy = false
   }
 }
 

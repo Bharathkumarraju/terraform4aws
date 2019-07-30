@@ -1,0 +1,3 @@
+ variable "bkregion" {
+   type = "string"
+ }

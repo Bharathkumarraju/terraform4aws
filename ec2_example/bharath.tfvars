@@ -1,0 +1,1 @@
+bkregion = "us-east-1"
